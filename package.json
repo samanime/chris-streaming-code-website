@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run server:run",
-    "build": "npm run server:build",
+    "build": "npm run client:build && npm run server:build && npm run public:build",
     "client:build": "cross-env BABEL_ENV=development babel src/client -d dist/client",
     "client:build:watch": "npm run client:build -- -w",
     "server:run": "node -r source-map-support dist/server",
