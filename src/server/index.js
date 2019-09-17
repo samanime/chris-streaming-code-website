@@ -1,3 +1,4 @@
+import { join } from 'path';
 import express from 'express';
 import { MongoClient } from 'mongodb';
 import config from './config';
@@ -25,12 +26,16 @@ app.get('/health/mongo', (_, res) => {
   res.send(`Mongo Connected: ${connected ? 'Yes' : 'No'}`);
 });
 
-app.get('/', (_, res) => {
-  res.send(`
-    <!DOCTYPE html>
-    <body>
-    <h1>Hello World</h1>
-  `);
+app.use('/client', express.static(join(__dirname, '../client')));
+app.use('/public', express.static(join(__dirname, '../client')));
+
+app.get('/favicon.ico', (_, res) => {
+  res.status(204).header("Expires", (new Date(Date.now() + 1000 * 60 * 60 * 24 * 365))
+      .toUTCString()).end();
+});
+
+app.get('**', (_, res) => {
+  res.sendFile(join(__dirname, '../public/index.html'));
 });
 
 app.listen(PORT, () => {

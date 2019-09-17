@@ -18,7 +18,7 @@ module.exports = api => {
     }
   } else {
     return {
-      sourceMaps: api.env('production') ? false : 'inline',
+      sourceMaps: 'inline',
       presets: [
         [
           '@babel/preset-env',
@@ -28,7 +28,8 @@ module.exports = api => {
               esmodules: true
             }
           }
-        ]
+        ],
+        '@babel/preset-react'
       ],
       plugins: [
         '@babel/plugin-proposal-class-properties',

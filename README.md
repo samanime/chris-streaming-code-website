@@ -24,7 +24,7 @@ Make sure you have the prerequisites above met.
 ### Quick Start
 
     npm install
-    npm build
+    npm run build
     npm start
 
 ## Configuration

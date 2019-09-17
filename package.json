@@ -4,16 +4,28 @@
   "description": "Chris Streaming Code Main Website",
   "main": "index.js",
   "scripts": {
-    "start": "node -r source-map-support dist/server",
-    "build": "cross-env BABEL_ENV=server babel src/server -d dist/server"
+    "start": "npm run server:run",
+    "build": "npm run server:build",
+    "client:build": "cross-env BABEL_ENV=development babel src/client -d dist/client",
+    "client:build:watch": "npm run client:build -- -w",
+    "server:run": "node -r source-map-support dist/server",
+    "server:run:watch": "nodemon -r source-map-support dist/server",
+    "server:build": "cross-env BABEL_ENV=server babel src/server -d dist/server",
+    "server:build:watch": "npm run server:build -- -w",
+    "public:build": "copyfiles public/** dist",
+    "public:build:watch": "nodemon --exec \"npm run public:build\" -w public -e *"
   },
   "author": "Christian Snodgrass",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.6.0",
-    "cross-env": "^5.2.1"
+    "@babel/preset-react": "^7.0.0",
+    "copyfiles": "^2.1.1",
+    "cross-env": "^5.2.1",
+    "nodemon": "^1.19.2"
   },
   "dependencies": {
     "express": "^4.17.1",
