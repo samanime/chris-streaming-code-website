@@ -41,8 +41,16 @@ export default class SocialPage extends React.PureComponent {
                         imageSource="/public/images/github-white.png"
                         activeImageSource="/public/images/github-dark.png"
                     >
-                    Checkout Code
-                </SocialPanel>
+                        Checkout Code
+                    </SocialPanel>
+                    <SocialPanel
+                        url="https://www.instagram.com/chrisstreamingcode"
+                        title="Instagram"
+                        imageSource="/public/images/instagram-white.png"
+                        activeImageSource="/public/images/instagram-color.png"
+                    >
+                        Follow
+                    </SocialPanel>
                 </div>
             </div>
         </div>;
