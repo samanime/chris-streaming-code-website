@@ -33,8 +33,16 @@ export default class SocialPage extends React.PureComponent {
                         imageSource="/public/images/twitter-white.svg"
                         activeImageSource="/public/images/twitter-blue.svg"
                     >
-                        Connect on Twitter
+                        Connect
                     </SocialPanel>
+                    <SocialPanel
+                        url="https://github.com/samanime"
+                        title="GitHub"
+                        imageSource="/public/images/github-white.png"
+                        activeImageSource="/public/images/github-dark.png"
+                    >
+                    Checkout Code
+                </SocialPanel>
                 </div>
             </div>
         </div>;
