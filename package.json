@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npm run server:run",
     "build": "npm run client:build && npm run server:build && npm run public:build",
+    "dev": "concurrently \"npm run server:run:watch\" \"npm run server:build:watch\" \"npm run client:build:watch\" \"npm run public:build:watch\"",
     "client:build": "cross-env BABEL_ENV=development babel src/client -d dist/client",
     "client:build:watch": "npm run client:build -- -w",
     "server:run": "node -r source-map-support dist/server",
@@ -23,6 +24,7 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
+    "concurrently": "^4.1.2",
     "copyfiles": "^2.1.1",
     "cross-env": "^5.2.1",
     "nodemon": "^1.19.2"

@@ -5,6 +5,7 @@ const { NavLink } = ReactRouterDOM;
 export default class HomePage extends React.PureComponent {
     render() {
         return <div className="HomePage">
+            <h1>Chris Streaming Code</h1>
             <div className="row">
                 <div className="col">
                     <p>

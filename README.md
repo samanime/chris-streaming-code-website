@@ -26,6 +26,33 @@ Make sure you have the prerequisites above met.
     npm install
     npm run build
     npm start
+    
+### Running for Development
+
+If you want to run all necessary commands in one terminal, with watch, you can run:
+
+    npm run dev
+    
+If you'd like to run the commands separately, run each of the following in different terminals:
+
+    npm run server:run:watch
+    npm run server:build:watch
+    npm run client:build:watch
+    npm run public:build:watch
+
+### NPM Scripts
+
+    - `start` - Runs the server. Must be built already.
+    - `build` - Builds the project.
+    - `dev` - Runs the server and builds the project in watch mode.
+    - `client:build` - Builds the client
+    - `client:build:watch` - Builds the client in watch mode.
+    - `server:run` - Runs the server. Must be built already.
+    - `server:run:watch` - Runs the server. Restarts if there are any changes.
+    - `server:build` - Builds the server.
+    - `server:build:watch` - Builds the server in watch mode.
+    - `public:build` - Copies the public directory for the build.
+    - `public:build:watch` - Copies the public directory for the build and watches for more changes.
 
 ## Configuration
 
