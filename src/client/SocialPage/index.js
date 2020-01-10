@@ -20,14 +20,6 @@ export default class SocialPage extends React.PureComponent {
                         View Live Streams
                     </SocialPanel>
                     <SocialPanel
-                        url="https://www.youtube.com/channel/UCAVGepRORPE9XR8pbp8As0g"
-                        title="YouTube"
-                        imageSource="/public/images/youtube-white.png"
-                        activeImageSource="/public/images/youtube-red.png"
-                    >
-                        View Video Archive
-                    </SocialPanel>
-                    <SocialPanel
                         url="https://twitter.com/ChrisStreamCode"
                         title="Twitter"
                         imageSource="/public/images/twitter-white.svg"
@@ -42,6 +34,22 @@ export default class SocialPage extends React.PureComponent {
                         activeImageSource="/public/images/github-dark.png"
                     >
                         Checkout Code
+                    </SocialPanel>
+                    <SocialPanel
+                      url="https://discord.gg/sXWuKw"
+                      title="Discord"
+                      imageSource="/public/images/discord-white.svg"
+                      activeImageSource="/public/images/discord-color.svg"
+                    >
+                        Chat
+                    </SocialPanel>
+                    <SocialPanel
+                      url="https://www.youtube.com/channel/UCAVGepRORPE9XR8pbp8As0g"
+                      title="YouTube"
+                      imageSource="/public/images/youtube-white.png"
+                      activeImageSource="/public/images/youtube-red.png"
+                    >
+                        View Video Archive
                     </SocialPanel>
                     <SocialPanel
                         url="https://www.instagram.com/chrisstreamingcode"
